@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8"> 
+		<title>JS-3-4</title>
+		<link rel="stylesheet" href="CSS/style.css">
+</head>
+	<body>
+		<div class="container">
+			<div class="wrap">
+				<form class="form">
+					<h3 class="form-title">Преобразование текста</h3>
+					<div>
+						<label class="textin">
+							<input type="text" id="text" placeholder="&nbsp" onkeyup="check()">
+							<span>Текст для изменения <strong> * </strong></span>
+						</label>
+					</div>
+					<button type="button" id="send" disabled>Изменить</button>
+					<button type="reset" onclick="check_reset()">Сбросить</button>			
+				</form>
+			</div>
+		<p class="result"></p>
+		</div>
+		<script src="JS/toUpperCase.js"></script>
+	</body>
+</html>

@@ -1,0 +1,129 @@
+* {
+	margin: 0px; 
+	padding: 0px; 
+	box-sizing: border-box;
+}
+body {
+	height: 100vh
+}
+input {
+	border: none;
+}
+
+button {
+	border: none;
+	border-radius: 2px;
+	font-size: 16px;
+	outline: none
+}
+button:hover:not(:disabled){
+	cursor: pointer;  
+	background-color: #30c39e
+}
+.container {
+	width: 100%;  
+	min-height: 100vh;
+	align-items: center;
+	padding: 30px;  
+	background-color: #ebebeb
+}
+.wrap {
+	width: 560px;
+	background: #fff;
+	border-radius: 10px;
+	position: relative;
+	margin: 0 auto;
+	padding: 40px;
+	box-shadow: 0 1px 8px rgba(0,0,0,.2),
+				0 3px 4px rgba(0,0,0,.14),
+				0 3px 3px -2px rgba(0,0,0,.12);
+}
+.wrap .form-title {
+	font-size: 22px;
+	text-transform: uppercase;
+	text-align: left;
+	width: 100%;
+	display: block;
+	padding-bottom: 20px
+}
+
+.form > button {
+	padding: 15px 25px
+}
+.form > button:last-child {
+	float: right
+}
+.form > button:hover:not(:disabled) {
+	box-shadow: 2px 2px white, 4px 4px #C76637;
+	top: -4px;
+	left: -4px;
+}
+.result {
+	margin: 20px auto;
+	text-align: center;
+	color: red
+}
+.textin strong {
+	color: red
+}
+.textin {
+	position: relative;
+	display: block;
+	line-height: normal;
+	width: 100%;
+	border: 1px solid #e6e6e6;
+	border-radius: 2px;
+	margin: 10px auto;
+	padding: 10px;
+}
+.textin span {
+	position: absolute;
+	bottom: 30%;
+	left: 20px;
+	opacity: .5;
+	visibility: hidden;
+	transition: .4s;
+}
+.textin input {
+	font-size: 20px;
+	outline: none
+}
+.textin input:placeholder-shown ~ span {
+	visibility: visible;
+}
+.textin input:placeholder-shown:focus ~ span,
+.textin input:not(:placeholder-shown) ~ span {
+	bottom: 125%;
+	left: 0;
+	opacity: 1;
+	font-size: 80%;
+	visibility: visible;
+}
+.lines {
+	width: 100%;
+	position: relative;
+	margin-bottom: 20px
+}
+.lines p {
+	margin: 20px
+}
+.lines input {
+	position: absolute;
+	all: unset;
+	width: 100%;
+	font-size: 30px;
+	line-height: 45px;
+	-moz-appearance: textfield;
+	text-align: center;
+}
+.lines::-webkit-inner-spin-button { 
+	display: none;
+}
+.lines button {
+	position: absolute;  
+	padding: 12px 20px;
+	bottom: 0
+}
+.lines button:last-child {
+	right: 0
+}

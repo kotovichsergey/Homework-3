@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8"> 
+		<title>JS-3-3</title>
+		<link rel="stylesheet" href="CSS/style.css">
+</head>
+	<body>
+		<div class="container">
+			<div class="wrap">
+				<form class="form">
+					<h3 class="form-title">Построение треугольника</h3>
+					<div>
+						<label class="textin">
+							<input type="text" id="simbol" placeholder="&nbsp" maxlength="1" onkeyup="value=value.replace(/^\s/,''); check()">
+							<span>Символ для построения треугольника <strong> * </strong></span>
+						</label>
+					</div>
+					<div class="lines">
+						<p>Количество строк в треугольнике:</p>
+						<button type="button" onclick="this.nextElementSibling.stepDown()">-</button>
+						<input type="number" min="3" max="100" value="3" readonly id="lines">
+						<button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+					</div>
+					<button type="button" id="send" disabled>Построить треугольник</button>
+					<button type="reset" onclick="check_reset()">Сбросить</button>			
+				</form>
+			</div>
+		<p class="result"></p>
+		</div>
+		<script src="JS/triangle.js"></script>
+	</body>
+</html>
